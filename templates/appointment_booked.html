@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Booked</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+    
+        <a href="{{ url_for('index') }}">Home</a>
+
+        <a href="{{ url_for('admin') }}">Admin</a>
+    </div>
+    <div class="container">
+        <h1>Appointment Confirmed</h1>
+        <p><strong>Patient Name:</strong> {{ patient[1] }}</p>
+        <p><strong>Patient Age:</strong> {{ patient[2] }}</p>
+        <p><strong>Contact Number:</strong> {{ patient[3] }}</p>
+        <p><strong>Doctor:</strong> {{ doctor[1] }} ({{ doctor[2] }})</p>
+        <p><strong>Appointment Date:</strong> {{ appointment_date }}</p>
+    </div>
+</body>
+</html>
